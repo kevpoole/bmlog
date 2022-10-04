@@ -1,0 +1,95 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(247, 221, 221), rgb(224, 186, 186));
+
+}
+.pigpic{
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spindiv{
+    height: 250px;
+    width: 250px;
+    
+}
+
+.buttons{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button{
+    border: 5px solid  rgb(209, 161, 161);
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    background-image: url(./SVG/unclicked.svg);
+
+}
+
+.btn1-div{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+.clkd{
+    background-image: url(./SVG/clicked.svg);
+}
+
+
+.pigsmile{
+    height: 250px;
+    width: 250px;
+    border: 10px solid rgb(221, 173, 168);
+    border-radius: 50%;
+    background: url(./pigsmile.jpg) no-repeat;
+    background-size: contain;
+    clip-path: circle(50%);
+    transition: ease;
+}
+
+.animate{
+    animation: pigspin 800ms;
+
+ }
+
+.pulse{
+    animation: pigpulse 500ms infinite;
+
+}
+ 
+
+.pause{
+    animation-play-state: paused;
+}
+
+@keyframes pigspin {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes pigpulse {
+    20% {transform: scale(1);}
+    40% {transform: scale(1.2);}
+    70% {transform: scale(1);}
+    100% {transform: scale(1);}
+}
+
+    
