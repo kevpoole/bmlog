@@ -1,0 +1,294 @@
+.guydiv {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+}
+@media (max-width: 550px) {
+  .pic {
+    height: 250px;
+    width: 250px;
+    bottom: 0;
+  }
+}
+
+.guy {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.eyediv {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+@media (max-width: 550px) {
+  .eyediv {
+    height: 250px;
+    width: 250px;
+    bottom: 0;
+  }
+}
+
+.eyes {
+  position: absolute;
+  top: 30.9%;
+  right: 3%;
+  z-index: 2;
+  width: 27.5%;
+  height: 5.5%;
+  background-color: white;
+  -webkit-animation: eyes 5s ease infinite;
+          animation: eyes 5s ease infinite;
+  transform: rotate(2deg);
+}
+
+.blank {
+  position: absolute;
+  top: 30%;
+  background-color: white;
+  height: 10%;
+  width: 35%;
+  z-index: 1;
+}
+
+@-webkit-keyframes eyes {
+  0% {
+    right: 40%;
+  }
+  20% {
+    right: 40%;
+  }
+  70% {
+    right: 32.5%;
+  }
+  75% {
+    right: 36.5%;
+  }
+  90% {
+    right: 36.5%;
+  }
+  100% {
+    right: 40%;
+  }
+}
+
+@keyframes eyes {
+  0% {
+    right: 40%;
+  }
+  20% {
+    right: 40%;
+  }
+  70% {
+    right: 32.5%;
+  }
+  75% {
+    right: 36.5%;
+  }
+  90% {
+    right: 36.5%;
+  }
+  100% {
+    right: 40%;
+  }
+}
+.odor-body {
+  color: #0ea395;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  font-size: 2rem;
+}
+@media (max-width: 550px) {
+  .odor-body {
+    font-size: 1.2rem;
+    height: 40%;
+    z-index: 5;
+  }
+}
+
+.odors {
+  color: #0ea395;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 8%;
+  z-index: 2;
+}
+.odors span:nth-of-type(1) {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.odors span:nth-of-type(2) {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.odors span:nth-of-type(3) {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.odors span:nth-of-type(4) {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.odors span:nth-of-type(5) {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.odors span:nth-of-type(6) {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+@media (max-width: 550px) {
+  .odors {
+    z-index: 4;
+  }
+}
+
+.odors2 {
+  color: #0ea395;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 8%;
+  z-index: 2;
+  text-align: right;
+}
+.odors2 span:nth-of-type(1) {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.odors2 span:nth-of-type(2) {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.odors2 span:nth-of-type(3) {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.odors2 span:nth-of-type(4) {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.odors2 span:nth-of-type(5) {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.odors2 span:nth-of-type(6) {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+@media (max-width: 550px) {
+  .odors2 {
+    z-index: 4;
+  }
+}
+
+.odor-words {
+  -webkit-animation: odors ease-in forwards infinite;
+          animation: odors ease-in forwards infinite;
+  opacity: 0;
+}
+
+.odor-words2 {
+  -webkit-animation: odors2 ease-in forwards infinite;
+          animation: odors2 ease-in forwards infinite;
+  opacity: 0;
+}
+
+@-webkit-keyframes odors {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes odors {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+@-webkit-keyframes odors2 {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes odors2 {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}/*# sourceMappingURL=odors.css.map */

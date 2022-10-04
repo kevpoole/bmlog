@@ -1,0 +1,75 @@
+.flush-body {
+  display: flex;
+}
+@media (max-width: 550px) {
+  .flush-body {
+    flex-direction: column;
+    height: 65%;
+    justify-content: space-around;
+  }
+}
+
+.flush-body > * {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 5rem;
+  text-align: center;
+  color: teal;
+  font-size: 2rem;
+}
+@media (max-width: 550px) {
+  .flush-body > * {
+    font-size: 1.5rem;
+  }
+}
+
+.rlz {
+  transform: scale(85%);
+}
+
+.rollz {
+  position: relative;
+}
+@media (max-width: 550px) {
+  .rollz {
+    height: 40%;
+  }
+}
+
+.rollnum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 550px) {
+  .rollnum {
+    transform: translate(-50%, -10%);
+    scale: 0.8;
+  }
+}
+
+.tp {
+  position: relative;
+}
+@media (max-width: 550px) {
+  .tp {
+    height: 40%;
+  }
+}
+
+.rollnum2 {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  height: 35%;
+  width: 35%;
+}
+@media (max-width: 550px) {
+  .rollnum2 {
+    top: 70%;
+    left: 45%;
+    scale: 1.2;
+  }
+}/*# sourceMappingURL=flush.css.map */

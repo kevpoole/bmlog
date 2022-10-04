@@ -6,7 +6,7 @@ const logFour = document.querySelector(".logcard4");
 logFour.addEventListener("click", () => {
   skunk.classList.add("skunk-shake");
   setTimeout(() => skunk.classList.remove("skunk-shake"), 200);
-  const fart = new Audio("./fart.mp3");
+  const fart = new Audio("./audio/fart.mp3");
   fart.play();
 });
 
@@ -15,7 +15,7 @@ const logTwo = document.querySelector(".logcard2");
 logTwo.addEventListener("click", () => {
   roll.classList.add("rollshrink");
   setTimeout(() => roll.classList.remove("rollshrink"), 1000);
-  const flush = new Audio("./flush.mp3");
+  const flush = new Audio("./audio/flush.mp3");
   flush.play();
 });
 
@@ -24,7 +24,7 @@ const logThree = document.querySelector(".logcard3");
 logThree.addEventListener("click", () => {
   poop.classList.add("skunk-shake");
   setTimeout(() => poop.classList.remove("skunk-shake"), 200);
-  const fart = new Audio("./fart.mp3");
+  const fart = new Audio("./audio/fart.mp3");
   fart.play();
 });
 
@@ -40,7 +40,7 @@ const logFive = document.querySelector(".logcard5");
 logFive.addEventListener("click", () => {
   plunger.classList.add("plunge");
   setTimeout(() => plunger.classList.remove("plunge"), 900);
-  const hooray = new Audio("./hooray.mp3");
+  const hooray = new Audio("./audio/hooray.mp3");
   hooray.play();
 });
 

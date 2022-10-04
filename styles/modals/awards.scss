@@ -1,0 +1,68 @@
+@use '../mixins';
+
+.award-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    position: relative;
+  }
+  
+  .award_button {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #f9f3e0c6;
+    height: 2rem;
+    width: 2rem;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    cursor: pointer;
+    z-index: 4;
+  }
+  
+  #previous {
+    left: 210px;
+  }
+  #next {
+    right: 210px;
+  }
+  
+  .ribbon-container {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    z-index: 3;
+  }
+  
+  .ribbon {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      transform: translateX(0%);
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  .plng {
+    position: absolute;
+    z-index: -1;
+    animation: plungerfloat 1s ease-in-out alternate infinite;
+  
+    img {
+      transform: scale(1.8);
+    }
+  }
+
+  @keyframes plungerfloat {
+    0% {
+      transform: translateY(-10%);
+    }
+    0% {
+      transform: translateY(10%);
+    }
+  }

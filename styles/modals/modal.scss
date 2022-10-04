@@ -1,0 +1,89 @@
+@use "../mixins";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  width: 70%;
+  height: 80%;
+  max-width: 70%;
+  background: #ecdfb8;
+  overflow: hidden;
+  @include mixins.mobile {
+    width: 90%;
+    max-width: 90%;
+    height: 95%;
+  }
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 2rem;
+
+  @include mixins.mobile {
+    height: 5%;
+    padding: 0.75rem 1rem;
+  }
+
+  .close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    @include mixins.mobile {
+      font-size: 1.3rem;
+      color: black;
+    }
+  }
+}
+
+.modal-blurb {
+  height: 20%;
+  font-size: 1.5rem;
+  padding: 0rem 2rem;
+  @include mixins.mobile {
+    font-size: 1rem;
+    padding: 0rem 1rem;
+  }
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 5;
+
+  .active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

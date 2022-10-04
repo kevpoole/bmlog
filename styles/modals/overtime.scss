@@ -1,0 +1,83 @@
+@use '../mixins';
+
+.graph-blurb {
+    height: 10%;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    @include mixins.mobile {
+      height: 40%;
+      font-size: 1rem;
+    }
+  }
+  
+  .graph-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    list-style: none;
+    @include mixins.mobile {
+      flex-direction: column;
+      font-size: 1.3rem;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+  
+    span {
+      background-color: blueviolet;
+    }
+  }
+  
+  .graph-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lines {
+    width: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lines > div > img {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  }
+  
+  .wholegraph {
+    width: 90%;
+    height: 30%;
+  }
+  
+  .plainlines {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    background: transparent;
+    z-index: 2;
+  }
+  .blank2 {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 0px;
+    background: #ecdfb8;
+    animation: graph 3s linear infinite;
+  }
+  
+  @keyframes graph {
+    0% {
+      transform: translateX(0px);
+    }
+  
+    60% {
+      transform: translateX(1000px);
+    }
+    100% {
+      transform: translateX(1005px);
+    }
+  }
+  

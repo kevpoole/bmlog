@@ -1,3 +1,4 @@
+@use "mixins";
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 body {
   min-height: 100vh;
   width: 100vw;
-  background-image: url(./png/backg.png);
+  background-image: url(../png/backg.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -16,20 +17,17 @@ body {
 .rolldiv {
   height: 500px;
   width: 500px;
-  background: url(./svg/blunger.svg) no-repeat center;
+  background: url(../svg/blunger.svg) no-repeat center;
   background-size: contain;
   position: absolute;
   top: 20%;
   right: -40%;
-  -webkit-animation: roll 10s linear alternate infinite, plunge 0.3s ease-in alternate infinite;
-          animation: roll 10s linear alternate infinite, plunge 0.3s ease-in alternate infinite;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation: roll 10s linear alternate infinite,
+    plunge 0.3s ease-in alternate infinite;
+  animation-delay: 4s;
   opacity: 0.75;
   z-index: -1;
-}
-@media (max-width: 550px) {
-  .rolldiv {
+  @include mixins.mobile {
     width: 200px;
     height: 300px;
     right: -60%;
@@ -50,16 +48,12 @@ header {
   letter-spacing: 0.15em;
   -webkit-text-stroke: 5px #c72e40;
   color: #c72e40;
-  -webkit-animation: fadein 0.5s ease-out;
-          animation: fadein 0.5s ease-out;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: fadein 0.5s ease-out;
+  animation-delay: 1s;
   opacity: 0;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@media (max-width: 550px) {
-  header {
+  animation-fill-mode: forwards;
+
+  @include mixins.mobile {
     font-size: 1.5rem;
   }
 }
@@ -69,9 +63,8 @@ main {
   height: 90vh;
   margin-left: 3rem;
   margin-right: 3rem;
-}
-@media (max-width: 550px) {
-  main {
+
+  @include mixins.mobile {
     flex-direction: column;
     margin: 0;
     align-items: center;
@@ -85,19 +78,13 @@ main {
   justify-content: center;
   align-items: center;
   transform: translateX(-50%) scale(3);
-  -webkit-animation: moveguy 1s ease-out;
-          animation: moveguy 1s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: moveguy 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
   z-index: -1;
-}
-@media (max-width: 550px) {
-  .rollbig {
+  @include mixins.mobile {
     transform: translateX(25%) translateY(-25%) scale(1.5);
-    -webkit-animation: moveguy2 1s ease-out;
-            animation: moveguy2 1s ease-out;
+    animation: moveguy2 1s ease-out;
   }
 }
 
@@ -113,30 +100,24 @@ main {
   padding-left: 2rem;
   padding-top: 2rem;
   line-height: 28px;
-  -webkit-animation: fadeinblurb 1s ease-out;
-          animation: fadeinblurb 1s ease-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+
+  animation: fadeinblurb 1s ease-out;
+  animation-delay: 3s;
   opacity: 0;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.blurb p {
-  font-family: DIN Alternate;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  letter-spacing: 0.02em;
-}
-@media (max-width: 550px) {
-  .blurb p {
-    font-size: 1.3rem;
-    width: 100%;
-    padding: 0.5rem;
+  animation-fill-mode: forwards;
+  p {
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    @include mixins.mobile {
+      font-size: 1.3rem;
+      width: 100%;
+      padding: 0.5rem;
+    }
   }
-}
-@media (max-width: 550px) {
-  .blurb {
+  @include mixins.mobile {
     flex-direction: row;
     width: 90%;
     padding: 0;
@@ -148,7 +129,6 @@ main {
   color: #735a24;
   font-size: 18px;
 }
-
 .log {
   background: #c4c4c4;
   border: 1px solid #000000;
@@ -164,9 +144,7 @@ main {
   outline: none;
   transition: 0.05s;
   margin-top: 2rem;
-}
-@media (max-width: 550px) {
-  .log {
+  @include mixins.mobile {
     width: 250px;
     height: 60px;
     font-size: 1.5rem;
@@ -191,7 +169,6 @@ button:active {
   height: 550px;
   width: 550px;
   position: absolute;
-  /* overflow: hidden; */
 }
 
 .guy {
@@ -211,15 +188,13 @@ button:active {
 
 .eyes {
   position: absolute;
-  /* padding-left: 1rem; */
   top: 30.9%;
   right: 3%;
   z-index: -1;
   width: 27.5%;
   height: 5.5%;
   background-color: white;
-  -webkit-animation: eyes 5s ease infinite;
-          animation: eyes 5s ease infinite;
+  animation: eyes 5s ease infinite;
   transform: rotate(2deg);
   box-shadow: none;
 }
@@ -233,17 +208,6 @@ button:active {
   z-index: -2;
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    transform: translateY(-20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
 @keyframes fadein {
   0% {
     transform: translateY(-20%);
@@ -251,16 +215,6 @@ button:active {
   }
   100% {
     transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeinblurb {
-  0% {
-    transform: translateX(-10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -274,28 +228,12 @@ button:active {
     opacity: 1;
   }
 }
-@-webkit-keyframes moveguy {
-  0% {
-    transform: translate(-50%, 0%) scale(3) rotate(0deg);
-  }
-  100% {
-    transform: translate(0%, 5%) scale(2.5) rotate(360deg);
-  }
-}
 @keyframes moveguy {
   0% {
     transform: translate(-50%, 0%) scale(3) rotate(0deg);
   }
   100% {
     transform: translate(0%, 5%) scale(2.5) rotate(360deg);
-  }
-}
-@-webkit-keyframes moveguy2 {
-  0% {
-    transform: translate(0%, -50%) scale(4) rotate(0deg);
-  }
-  100% {
-    transform: translate(55%, -25%) scale(1.5) rotate(360deg);
   }
 }
 @keyframes moveguy2 {
@@ -306,28 +244,12 @@ button:active {
     transform: translate(55%, -25%) scale(1.5) rotate(360deg);
   }
 }
-@-webkit-keyframes roll {
-  0% {
-    right: -40%;
-  }
-  100% {
-    right: 110%;
-  }
-}
 @keyframes roll {
   0% {
     right: -40%;
   }
   100% {
     right: 110%;
-  }
-}
-@-webkit-keyframes plunge {
-  0% {
-    transform: translateY(-10%);
-  }
-  100% {
-    transform: translateY(10%);
   }
 }
 @keyframes plunge {
@@ -337,4 +259,4 @@ button:active {
   100% {
     transform: translateY(10%);
   }
-}/*# sourceMappingURL=styles.css.map */
+}

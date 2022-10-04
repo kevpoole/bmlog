@@ -1,0 +1,64 @@
+@use '../mixins';
+
+.flush-body {
+    display: flex;
+    @include mixins.mobile {
+      flex-direction: column;
+      height: 65%;
+      justify-content: space-around;
+    }
+  }
+  
+  .flush-body > * {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 5rem;
+    text-align: center;
+    color: teal;
+    font-size: 2rem;
+    @include mixins.mobile {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .rlz {
+    transform: scale(85%);
+  }
+  
+  .rollz {
+    position: relative;
+    @include mixins.mobile {
+      height: 40%;
+    }
+  }
+  .rollnum {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.mobile {
+      transform: translate(-50%, -10%);
+      scale: 0.8;
+    }
+  }
+  
+  .tp {
+    position: relative;
+    @include mixins.mobile {
+      height: 40%;
+    }
+  }
+  .rollnum2 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    height: 35%;
+    width: 35%;
+    @include mixins.mobile {
+      top: 70%;
+      left: 45%;
+      scale: 1.2;
+    }
+  }
+  

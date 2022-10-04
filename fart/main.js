@@ -1,7 +1,7 @@
 window.addEventListener("keydown", playSkunk);
 const skunk = document.querySelectorAll(".skunk");
 const audioCtx = new AudioContext();
-const fart = new Audio("../fartscale.wav");
+const fart = new Audio("../audio/fartscale.wav");
 const source = audioCtx.createMediaElementSource(fart);
 source.connect(audioCtx.destination);
 
