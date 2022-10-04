@@ -402,7 +402,7 @@
   gap: 8rem;
   width: 100%;
   height: 100%;
-  @include mixins.mobile{
+  @include mixins.mobile {
     flex-direction: column;
     height: 50%;
     gap: 2rem;
@@ -415,7 +415,7 @@
   border: 2px solid rgba(0, 0, 0, 0.23);
   border-radius: 10px;
   padding: 2rem;
-  @include mixins.mobile{
+  @include mixins.mobile {
     width: 50%;
     height: 50%;
   }
@@ -479,11 +479,83 @@
   }
 }
 
+.drip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url(./svg/drip\ 1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.contents {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  span:first-of-type{
+    top: 30%;
+    left: 5%;
+    rotate: -40deg;
+  }
+  span:nth-of-type(2){
+    top: 30%;
+    left: 70%;
+    rotate: 20deg;
+  }
+  span:nth-of-type(3){
+    top: 50%;
+    left: 20%;
+    scale: .7;
+    rotate: 20deg;
+  }
+  span:nth-of-type(4){
+    top: 5%;
+    left: 20%;
+    rotate: -10deg;
+  }
+  span:nth-of-type(5){
+    top: 40%;
+    left: 80%;
+    rotate: -40deg;
+    scale: 1.5;
+  }
+  span:nth-of-type(6){
+    top: 10%;
+    right: 10%;
+    rotate: 10deg;
+    scale: .6;
+  }
+ 
+}
+
+.drip-word {
+  display: block;
+  color: #3b4b74;
+  font-size: 2rem;
+  animation: wordfloat 2s ease-in-out alternate infinite;
+  position: absolute;
+
+}
+
+
+
 @keyframes plungerfloat {
   0% {
     transform: translateY(-10%);
   }
   0% {
+    transform: translateY(10%);
+  }
+}
+@keyframes wordfloat {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
     transform: translateY(10%);
   }
 }
