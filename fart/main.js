@@ -1,9 +1,13 @@
 window.addEventListener("keydown", playSkunk);
 const skunk = document.querySelectorAll(".skunk");
+
+skunk.forEach(item => item.addEventListener('click', playSkunk))
+
 const audioCtx = new AudioContext();
 const fart = new Audio("../audio/fartscale.wav");
 const source = audioCtx.createMediaElementSource(fart);
 source.connect(audioCtx.destination);
+
 
 let segmentEnd;
 
@@ -25,10 +29,16 @@ fart.addEventListener(
 );
 
 function playSkunk(e) {
-  const note = document.querySelector(`div[data-key="${e.key}"]`);
+  let keyCode;
+  if (e.type === 'click') {
+    keyCode = e.currentTarget.dataset.key;
+  } else {
+    keyCode = e.key;
+  }
+  const note = document.querySelector(`div[data-key="${keyCode}"]`);
   note?.classList.add("skunk-shake");
   setTimeout(() => note?.classList.remove("skunk-shake"), 200);
-  switch (e.key) {
+  switch (keyCode) {
     case "z":
       playSegment(0, 0.2);
       break;
