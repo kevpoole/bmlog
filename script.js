@@ -58,18 +58,18 @@ const numberOfImages = document.querySelectorAll(".ribbon img").length;
 
 let imageIndex = 1;
 let translateX = 0;
-
+let position = getComputedStyle(awardImages)
 awardButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (event.target.id === "previous") {
       if (imageIndex !== 1) {
         imageIndex--;
-        translateX += 500;
+        translateX +=  +position.width.slice(0, 3);
       }
     } else {
       if (imageIndex !== numberOfImages) {
         imageIndex++;
-        translateX -= 500;
+        translateX -=  +position.width.slice(0, 3);
       }
     }
     // showAward.classList.remove('ribbon-hide')

@@ -20,13 +20,20 @@
     padding-bottom: 4px;
     cursor: pointer;
     z-index: 4;
+   
   }
   
   #previous {
     left: 210px;
+    @include mixins.mobile{
+      left: 10px;
+    }
   }
   #next {
     right: 210px;
+    @include mixins.mobile{
+      right: 10px;
+    }
   }
   
   .ribbon-container {
@@ -34,6 +41,11 @@
     height: 500px;
     overflow: hidden;
     z-index: 3;
+    @include mixins.mobile{
+      width: 300px;
+      height: 300px;
+     
+    }
   }
   
   .ribbon {
@@ -46,6 +58,10 @@
       transform: translateX(0%);
       min-width: 100%;
       min-height: 100%;
+    }
+    @include mixins.mobile{
+      width: 300px;
+      height: 300px;
     }
   }
   .plng {

@@ -23,9 +23,19 @@
 #previous {
   left: 210px;
 }
+@media (max-width: 550px) {
+  #previous {
+    left: 10px;
+  }
+}
 
 #next {
   right: 210px;
+}
+@media (max-width: 550px) {
+  #next {
+    right: 10px;
+  }
 }
 
 .ribbon-container {
@@ -33,6 +43,12 @@
   height: 500px;
   overflow: hidden;
   z-index: 3;
+}
+@media (max-width: 550px) {
+  .ribbon-container {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .ribbon {
@@ -46,6 +62,12 @@
   transform: translateX(0%);
   min-width: 100%;
   min-height: 100%;
+}
+@media (max-width: 550px) {
+  .ribbon {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .plng {
