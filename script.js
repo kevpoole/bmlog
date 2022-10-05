@@ -33,6 +33,8 @@ const logOne = document.querySelector(".logcard1");
 logOne.addEventListener("click", () => {
   restrooms.classList.add("dooropen");
   setTimeout(() => restrooms.classList.remove("dooropen"), 1500);
+  const door = new Audio("./audio/door.mp3");
+  door.play();
 });
 
 const plunger = document.querySelector("[data-plunge]");
@@ -49,6 +51,8 @@ const logSix = document.querySelector(".logcard6");
 logSix.addEventListener("click", () => {
   odd.classList.add("warp");
   setTimeout(() => odd.classList.remove("warp"), 900);
+  const whoop = new Audio("./audio/whoop.mp3");
+  whoop.play();
 });
 
 const awardImages = document.querySelector(".ribbon");
